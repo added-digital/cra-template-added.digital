@@ -8,6 +8,10 @@
     "typescript"
   ],
   "description": "Added.digital template for create-react-app.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/added-digital/cra-template-added.digital.git"
+  },
   "license": "MIT",
   "engines": {
     "node": ">=14"
