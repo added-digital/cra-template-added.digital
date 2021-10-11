@@ -22,7 +22,7 @@ const Button = (props: ButtonProps) => {
       className={buttonClasses.join(" ")}
       style={{ width: props.width }}
       onClick={() => {
-        if (!props.isLoading) {
+        if (!props.isLoading && props.onClick) {
           props.onClick();
         }
       }}
