@@ -20,6 +20,7 @@ const Dropdown = (props: DropdownProps) => {
       color: "#2B2B2B",
       borderRadius: "40px",
       boxShadow: "0px 8px 24px rgba(149, 157, 165, 0.15)",
+      padding: "0 10px",
     }),
     option: (styles: any, state: any) => ({
       ...styles,
@@ -36,27 +37,29 @@ const Dropdown = (props: DropdownProps) => {
   };
 
   return (
-    <Select
-      options={props.options}
-      value={props.value === "" ? null : props.options.find((obj) => obj.value === props.value)}
-      placeholder={props.title}
-      styles={dropdownStyles}
-      loadingMessage={() => "Laddar..."}
-      isLoading={props.isLoading}
-      theme={(theme) => ({
-        ...theme,
-        colors: {
-          ...theme.colors,
-          primary: "black",
-        },
-      })}
-      onChange={(value) => props.onSelect(value?.value || "")}
-      noOptionsMessage={() => "Inga resultat"}
-      components={{
-        IndicatorSeparator: () => null,
-      }}
-      isSearchable={props.isSearchable === undefined ? false : props.isSearchable}
-    />
+    <div className="dropdown-wrapper" style={{ width: props.width ? props.width : 200 }}>
+      <Select
+        options={props.options}
+        value={props.value === "" ? null : props.options.find((obj) => obj.value === props.value)}
+        placeholder={props.title}
+        styles={dropdownStyles}
+        loadingMessage={() => "Laddar..."}
+        isLoading={props.isLoading}
+        theme={(theme) => ({
+          ...theme,
+          colors: {
+            ...theme.colors,
+            primary: "black",
+          },
+        })}
+        onChange={(value) => props.onSelect(value?.value || "")}
+        noOptionsMessage={() => "Inga resultat"}
+        components={{
+          IndicatorSeparator: () => null,
+        }}
+        isSearchable={props.isSearchable === undefined ? false : props.isSearchable}
+      />
+    </div>
   );
 };
 
