@@ -1,9 +1,11 @@
 import "./Layout.scss";
 
-type LayoutProps = {};
+type LayoutProps = {
+  children: React.ReactNode;
+};
 
 const Layout = (props: LayoutProps) => {
-  return <div></div>;
+  return <div className="content">{props.children}</div>;
 };
 
 export default Layout;
