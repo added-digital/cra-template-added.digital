@@ -1,8 +1,8 @@
 import "./Home.scss";
 
-type HomeProps = {};
+interface IHomeProps {}
 
-const Home = (props: HomeProps) => {
+const Home = (props: IHomeProps) => {
   return <div>New react app with added.digital template!</div>;
 };
 

@@ -1,14 +1,14 @@
 import "./Input.scss";
 
-type InputProps = {
+interface IInputProps {
   type: "email" | "password" | "text";
   value: string;
   onChange: (value: string) => void;
   placeholder?: string;
   className?: string;
-};
+}
 
-const Input = (props: InputProps) => {
+const Input = (props: IInputProps) => {
   const inputClasses = ["input"];
   if (props.className) {
     inputClasses.push(props.className);

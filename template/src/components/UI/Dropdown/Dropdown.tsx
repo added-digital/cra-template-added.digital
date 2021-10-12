@@ -1,7 +1,7 @@
 import "./Dropdown.scss";
 import Select from "react-select";
 
-type DropdownProps = {
+interface IDropdownProps {
   options: { label: string; value: string }[];
   title: string;
   onSelect: (value: string) => void;
@@ -9,9 +9,9 @@ type DropdownProps = {
   width?: number | string;
   isSearchable?: boolean;
   isLoading?: boolean;
-};
+}
 
-const Dropdown = (props: DropdownProps) => {
+const Dropdown = (props: IDropdownProps) => {
   const dropdownStyles = {
     control: (styles: any, state: any) => ({
       ...styles,

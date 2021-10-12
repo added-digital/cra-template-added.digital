@@ -1,10 +1,10 @@
 import "./Layout.scss";
 
-type LayoutProps = {
+interface ILayoutProps {
   children: React.ReactNode;
-};
+}
 
-const Layout = (props: LayoutProps) => {
+const Layout = (props: ILayoutProps) => {
   return <div className="content">{props.children}</div>;
 };
 

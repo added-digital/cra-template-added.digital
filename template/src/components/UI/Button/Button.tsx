@@ -1,14 +1,14 @@
 import "./Button.scss";
 
-type ButtonProps = {
+interface IButtonProps {
   label: string;
   onClick?: () => void;
   className?: string;
   isLoading?: boolean;
   width?: string;
-};
+}
 
-const Button = (props: ButtonProps) => {
+const Button = (props: IButtonProps) => {
   const buttonClasses = ["button", "waves-effect"];
   if (props.className) {
     buttonClasses.push(props.className);
