@@ -27,7 +27,7 @@ const Button = (props: IButtonProps) => {
         }
       }}
     >
-      {props.label}
+      {props.isLoading && <i className="far fa-spinner-third" />} {props.label}
     </button>
   );
 };

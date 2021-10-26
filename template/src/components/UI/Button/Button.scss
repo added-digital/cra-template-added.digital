@@ -6,4 +6,23 @@
   font-weight: 700;
   font-size: 14px;
   background: #e5e5e5;
+
+  &.loading {
+    position: relative;
+    color: transparent;
+
+    i {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      animation: spin 500ms ease-out infinite;
+
+      @keyframes spin {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
 }
